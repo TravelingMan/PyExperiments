@@ -18,20 +18,20 @@ def choose_cave():
 
 
 def check_cave(choosen_cave):
-    print('You steady yourself and approach the cave.')
+    print('\nYou steady yourself and approach the cave.')
     time.sleep(2)
-    print('Darkness surrounds you. A wave of heat slams into your body.')
+    print('\nDarkness surrounds you. A wave of heat slams into your body.')
     time.sleep(2)
-    print('''The eyes of a terrifying dragon suddenly open, lighting the cave with an ominous, ancient light. The 
+    print('''\nThe eyes of a terrifying dragon suddenly open, lighting the cave with an ominous, ancient light. The 
 enormous head approaches you and ...''')
     time.sleep(3)
 
     friendly_cave = random.randint(1, 2)
 
     if choosen_cave == str(friendly_cave):
-        print('Offers you a portion of his treasure!')
+        print('\nOffers you a portion of his treasure!')
     else:
-        print('Snaps his jaws around you, ending your life.')
+        print('\nSnaps his jaws around you, ending your life.')
 
 
 play_again = 'yes'
@@ -40,4 +40,4 @@ while play_again == 'yes' or play_again == 'y':
     cave_number = choose_cave()
     check_cave(cave_number)
 
-    play_again = input('\nWant to try your luck again? ')
+    play_again = input('Want to try your luck again? ')
