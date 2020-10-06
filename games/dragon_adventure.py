@@ -1,4 +1,5 @@
-import random, time
+import random
+import time
 
 
 def display_intro():
