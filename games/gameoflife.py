@@ -36,7 +36,7 @@ while True:
             above_coord = (y - 1) % HEIGHT
             below_coord = (y + 1) % HEIGHT
 
-            # Count the number of livin neighbors
+            # Count the number of living neighbors
             num_neighbors = 0
             if current_cells[left_coord][above_coord] == '#':
                 num_neighbors += 1  # Top neighbor alive
