@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+Collatz
+A fun math problem.
+"""
+
+
 def collatz(number):
     if number % 2 == 0:
         x = number / 2

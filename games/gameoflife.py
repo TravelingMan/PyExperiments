@@ -1,4 +1,10 @@
-# Conways Game of Life
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+Conway's Game of Life
+A simple version adapted from another adapted version by Al Sweigart
+"""
 
 import copy
 import random

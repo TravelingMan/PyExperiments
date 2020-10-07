@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+Dragon Adventure
+Adapted from Al Sweigart's "Dragon Realms" game
+"""
+
 import random
 import time
 
