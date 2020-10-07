@@ -26,7 +26,7 @@ def choose_cave():
     return cave
 
 
-def check_cave(choosen_cave):
+def check_cave(chosen_cave):
     print('\nYou steady yourself and approach the cave.')
     time.sleep(2)
     print('\nDarkness surrounds you. A wave of heat slams into your body.')
@@ -37,7 +37,7 @@ enormous head approaches you and ...''')
 
     friendly_cave = random.randint(1, 2)
 
-    if choosen_cave == str(friendly_cave):
+    if chosen_cave == str(friendly_cave):
         print('\nOffers you a portion of his treasure!')
     else:
         print('\nSnaps his jaws around you, ending your life.')
