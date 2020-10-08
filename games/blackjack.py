@@ -80,6 +80,8 @@ dealer.show_hand()
 player_bust = False
 dealer_bust = False
 
+# TODO: Build out an actual game loop
+# TODO: Track currency
 while input('Would you like to stay or hit?').lower() != 'stay':
     player.add_card(game.pull_card())
 
