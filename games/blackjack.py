@@ -37,7 +37,7 @@ class Player():
         print('==============')
         for i in range(len(self.hand)):
             if self.name == 'Dealer' and i == 0 and dealer_start:
-                print("- of -")  # Hide first card
+                print('- of -')  # Hide first card
             else:
                 card = self.hand[i]
                 print(f'{card[0]} of {card[1]}')
@@ -73,5 +73,41 @@ for i in range(2):
     player.add_card(game.pull_card())
     dealer.add_card(game.pull_card())
 
+# TODO: DRY this out eventually with refactor
 player.show_hand()
 dealer.show_hand()
+
+player_bust = False
+dealer_bust = False
+
+while input('Would you like to stay or hit?').lower() != 'stay':
+    player.add_card(game.pull_card())
+
+    player.show_hand()
+    dealer.show_hand()
+
+    if player.calc_hand() > 21:
+        player_bust = True
+        print('You lose!')
+        break
+
+if not player_bust:
+    while dealer.calc_hand(False) < 17:
+        dealer.add_card(game.pull_card())
+
+        if dealer.calc_hand(False) > 21:
+            dealer_bust = True
+            print('You win!')
+            break
+
+player.show_hand()
+dealer.show_hand()
+
+if player_bust:
+    print('\nYou busted. Better luck next time.')
+elif dealer_bust:
+    print('\nThe dealer busted. You win!')
+elif dealer.calc_hand(False) > player.calc_hand():
+    print('\nYou beat the dealer! You win!')
+else:
+    print('\nYou pushed, no one wins.')
